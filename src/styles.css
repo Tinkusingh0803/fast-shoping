@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.seller-auth{
+    margin-top: 40px;
+    color: blueviolet;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100vw; 
+
+}  
+.common-form{
+    width: 30vw; 
+}
+.form-group{
+    border: 1px solid blueviolet;
+}
+.submitBtn{
+    border: 1px solid blueviolet;
+
+}

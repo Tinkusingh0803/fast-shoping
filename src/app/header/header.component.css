@@ -1,0 +1,30 @@
+ 
+.input-group{
+    color: blueviolet;
+    /* margin-right: 20px; */
+    border: 2px solid blueviolet;
+    margin-top: 20px;
+} 
+.form-control{
+    box-shadow: none;
+    
+}
+.contentDiv{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    margin-left: 70px;
+    margin-right: 70px;
+} 
+.navbar-brand{
+    color: blueviolet;
+}
+button{
+    border-left: 2px solid blueviolet;
+    
+}
+ .nav-link{
+    color: blueviolet;
+    font-size: large;
+ }

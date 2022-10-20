@@ -1,0 +1,39 @@
+ 
+
+<div class="seller-auth">
+    <div class="signup" *ngIf="!signupForm">
+<h2>Seller Sign-Up</h2>
+<form #sellerSignUp="ngForm" (ngSubmit)="signup(sellerSignUp)" class="common-form">
+    <div class="form-group mt-3"> 
+      <input type="text" class="form-control" [(ngModel)]="username" name="name" required placeholder="Enter Name">
+    </div>
+    <div class="form-group mt-3">
+      <input type="password" class="form-control" [(ngModel)]="password" minlength = '5'  name="password" required placeholder="Enter Password">
+    </div>
+    <div class="form-group mt-3">
+        <input type="email" class="form-control" email="true" [(ngModel)]="email" name="email" required placeholder="Enter Email">
+      </div>
+    <button type="submit" class="btn btn-primary submitBtn mt-3 p-2 w-100" [disabled]="sellerSignUp.invalid">SignUp</button>
+    <a class="openLogin" (click)="openLogin()">you have already account click here</a>
+  </form>
+  </div>
+
+  <!-- login form -->
+  <div class="signup" *ngIf="signupForm">
+    <h2>Seller LogIn</h2>
+    <p class="redColor">{{authError}}</p>
+    <form #sellerlogin="ngForm" (ngSubmit)="login(sellerlogin)" class="common-form">
+      <div class="form-group mt-3">
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" required placeholder="Enter Email">
+      </div>
+        <div class="form-group mt-3">
+          <input type="password" class="form-control" [(ngModel)]="password" required name="password" placeholder="Enter Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary submitBtn mt-3 p-2 w-100" [disabled]="sellerlogin.invalid">LogIn</button>
+        
+      </form>
+      <a class="openLogin" (click)="openSignup()">don't have account click here</a>
+      </div>
+      <!-- end login form -->
+  </div>
