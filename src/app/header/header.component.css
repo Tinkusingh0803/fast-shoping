@@ -28,3 +28,9 @@ button{
     color: blueviolet;
     font-size: large;
  }
+ .navbar-collapse{
+    justify-content: flex-end;
+ }
+ .nav-link{
+    cursor: pointer;
+ }

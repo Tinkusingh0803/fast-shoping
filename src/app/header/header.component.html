@@ -1,11 +1,11 @@
- <div class="container" *ngIf="authError">
+ <div class="container">
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" routerLink="/">FAST-SHOPPING</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="contentDiv">
+      <div class="contentDiv" *ngIf="sellerType === 'default' ">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Search here" aria-label="Search here" aria-describedby="button-addon2">
           <div class="input-group-append">
@@ -13,12 +13,18 @@
           </div>
         </div>
       </div>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" routerLink="/">Home </a>
+      <div class="collapse navbar-collapse" [ngSwitch]="sellerType" id="navbarNavAltMarkup">
+        <div class="navbar-nav" *ngSwitchCase=" 'default' ">
           <a class="nav-item nav-link" routerLink="seller-auth">Seller</a>
+          <a class="nav-item nav-link" routerLink="/">Home </a>
           <a class="nav-item nav-link" routerLink="login">Login</a>
           <a class="nav-item nav-link" routerLink="cart">Cart(0)</a>
+        </div>
+        <div class="navbar-nav" *ngSwitchCase=" 'seller' ">
+          <a class="nav-item nav-link" routerLink="">Product List</a>
+          <a class="nav-item nav-link" routerLink=""> Add Product </a>
+          <a class="nav-item nav-link" (click)="logout()">Logout</a>
+          <a class="nav-item nav-link " routerLink=""> <b>{{sellerName}} </b></a>
         </div>
       </div>
     </nav>

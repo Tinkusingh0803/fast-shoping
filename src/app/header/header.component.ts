@@ -1,23 +1,36 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { SellerService } from '../services/seller.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  authError:any= true;
-
-
-  constructor(private seller: SellerService) {}
-
-
+  sellerType: string = 'default';
+  sellerName: string = '';
+  constructor(private router: Router) {}
   ngOnInit(): void {
-this.seller.headerHide.subscribe((res:any)=>{
-  if (res) {
-    this.authError=false;
+    this.router.events.subscribe((res: any) => {
+      if (res.url) {
+        if (localStorage.getItem('seller') && res.url.includes('seller')) {
+          this.sellerType = 'seller';
+          if (localStorage.getItem('seller')) {
+            let sellerItem = localStorage.getItem('seller');
+            let sellerStoreItem = sellerItem && JSON.parse(sellerItem);
+            if (sellerStoreItem.name) {
+              this.sellerName = sellerStoreItem?.name;
+            } else {
+              this.sellerName = sellerStoreItem[0]?.name;
+            }
+          }
+        } else {
+          this.sellerType = 'default';
+        }
+      }
+    });
   }
-})
+  logout() {
+    localStorage.removeItem('seller');
+    this.router.navigate(['/']);
   }
 }

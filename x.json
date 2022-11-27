@@ -5,7 +5,36 @@
       "email": "singhtinku0803@gmail.com",
       "password": "1234",
       "id": 1
+    },
+    {
+      "name": "Tinku",
+      "password": "tttttt",
+      "email": "tinku@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Monu Rajput",
+      "password": "mmmmmm",
+      "email": "monu@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "dolly",
+      "password": "dddddd",
+      "email": "dolly@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Leo",
+      "password": "leo123",
+      "email": "leo@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "yogesh",
+      "password": "yyyyyy",
+      "email": "yogesh@gmail.com",
+      "id": 6
     }
-    
   ]
 }
