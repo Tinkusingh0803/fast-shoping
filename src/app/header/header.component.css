@@ -31,6 +31,6 @@ button{
  .navbar-collapse{
     justify-content: flex-end;
  }
- .nav-link{
+ .logout{
     cursor: pointer;
- }
+ } 

@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: 'https://jsonplaceholder.typicode.com/',
-  sellerApi: 'http://localhost:3000/seller'
+  sellerApi: 'http://localhost:3000'
 };
 
 /*

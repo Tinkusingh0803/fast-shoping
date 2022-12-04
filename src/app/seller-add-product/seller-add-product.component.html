@@ -1,0 +1,69 @@
+<h5 class="text-center m-2" >{{isErrorMessage}}</h5>
+<div class="add-product seller-auth">
+  <h1>Add New Product</h1>
+  <form  [formGroup]="getSellerData" (ngSubmit)="addProductItem()" class="common-form">
+    <div class="form-group mt-3">
+      <input
+        type="text"
+        class="form-control"
+        name="name" 
+        formControlName="name"
+        placeholder="Enter Product Name"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <input
+        type="number"
+        class="form-control"
+          formControlName="price"
+        name="price"
+        placeholder="Enter Product Price"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="color"
+        name="color"
+        placeholder="Enter Product Color"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <input
+        type="text"
+        class="form-control" 
+        formControlName="category"
+        name="category"
+        placeholder="Enter Product Category"
+        required
+      />
+    </div>
+    <div class="form-group mt-3">
+      <textarea
+        type="text"
+        class="form-control" 
+        formControlName="description"
+        name="description"
+        placeholder="Enter Product Description"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group mt-3">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="image"
+          name="image"
+          placeholder="Enter Product Image URL"
+        required
+        />
+      </div>
+    <button type="submit" [disabled]="getSellerData.invalid" class="btn btn-primary Btn mt-3 p-2 w-100">
+      Add Product
+    </button>
+  </form>
+</div> 

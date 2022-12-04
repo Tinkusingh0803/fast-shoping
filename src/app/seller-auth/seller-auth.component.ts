@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
 @Component({
@@ -20,7 +20,6 @@ export class SellerAuthComponent implements OnInit {
   }
 
   signup(sellerSignUp: NgForm) {
-    console.log(sellerSignUp);
     this.seller.userSignUp(sellerSignUp.value);
     sellerSignUp.reset();
   }

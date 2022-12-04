@@ -7,9 +7,9 @@
       "id": 1
     },
     {
-      "name": "Tinku",
-      "password": "tttttt",
-      "email": "tinku@gmail.com",
+      "name": "dolly",
+      "password": "dddddd",
+      "email": "dolly@gmail.com",
       "id": 2
     },
     {
@@ -17,24 +17,53 @@
       "password": "mmmmmm",
       "email": "monu@gmail.com",
       "id": 3
-    },
+    }
+  ],
+  "products": [
     {
-      "name": "dolly",
-      "password": "dddddd",
-      "email": "dolly@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "Leo",
-      "password": "leo123",
-      "email": "leo@gmail.com",
+      "name": "samsung",
+      "price": 400,
+      "color": "black",
+      "category": "mobiles",
+      "description": "new mobile",
+      "image": "https://www.reliancedigital.in/medias/Oppo-K10-Smartphone-492849761-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0Mzg1MzJ8aW1hZ2UvanBlZ3xpbWFnZXMvaGNjL2gxYS85ODcwMzI4MTM1NzEwLmpwZ3w5NGViYzVhODFlMDBkOWU0ZTVmMTcyNDgzYjg0ZGQwY2FhNTIzMWI0YzZjMjlhMGU3NTA3Zjk1ZmEzYzc1MjMz",
       "id": 5
     },
     {
-      "name": "yogesh",
-      "password": "yyyyyy",
-      "email": "yogesh@gmail.com",
+      "name": "Phone",
+      "price": 12000,
+      "color": "white",
+      "category": "redmi",
+      "description": "best phone under 12000",
+      "image": "https://images.pexels.com/photos/1682519/pexels-photo-1682519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 6
+    },
+    {
+      "name": "Earphone",
+      "price": 500,
+      "color": "white",
+      "category": "Bote",
+      "description": "best sound of boat you can buy this Earphone ",
+      "image": "https://m.media-amazon.com/images/I/61xftZKXvwL._SL1500_.jpg",
+      "id": 7
+    },
+    {
+      "name": "Laptop",
+      "price": 40000,
+      "color": "Golden",
+      "category": "Apple",
+      "description": "this is a best laptop under 40000 ",
+      "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 8
+    },
+    {
+      "name": "Office Bag",
+      "price": 2000,
+      "color": "Black",
+      "category": "Lenovo",
+      "description": "this is a office bag. and very comfortable to carry.",
+      "image": "https://m.media-amazon.com/images/I/61wC3TJ7PhL._UX679_.jpg",
+      "id": 9
     }
   ]
 }

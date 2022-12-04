@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; 
 import { AuthGuard } from './auth.guard';
-import { HomeComponent } from './home/home.component';
-import { SellerAuthComponent } from './seller-auth/seller-auth.component';
-// import { StudentDetailsComponent } from './student-details/student-details.component';
-
 const routes: Routes = [ 
   {
     path: '', loadChildren:()=> import('./home/home.module').then(m=>m.HomeModule)
@@ -14,6 +10,14 @@ const routes: Routes = [
   },
   {
     path:'seller-home', loadChildren:()=> import('./seller-home/seller-home.module').then(m=>m.SellerHomeModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'seller-add-product', loadChildren:()=> import('./seller-add-product/seller-add-product.module').then(m=>m.SellerAddProductModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'seller-update-product/:id', loadChildren:()=> import('./seller-update-product/seller-update-product.module').then(m=>m.SellerUpdateProductModule),
     canActivate:[AuthGuard]
   }
 ];

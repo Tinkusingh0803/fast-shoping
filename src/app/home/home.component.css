@@ -1,0 +1,24 @@
+ .images{ 
+    object-fit: contain;
+    height: 600px;
+    width: 100vw;
+ }
+ .carousel-caption{
+    background-color: #21252975;
+    border-radius: 20px;
+ }  
+ .card-img-top{
+   object-fit: contain;
+    height: 237px;
+ }
+ .border-top{
+   background-color: aliceblue;
+ }
+ .col-md-6 a{
+   color: #960dfd;
+   text-decoration: none;
+ }
+ .col-md-6 a:hover{
+   color: #9d5fcf; 
+   font-weight: bold;
+ } 
