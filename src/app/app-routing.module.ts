@@ -19,6 +19,15 @@ const routes: Routes = [
   {
     path: 'seller-update-product/:id', loadChildren:()=> import('./seller-update-product/seller-update-product.module').then(m=>m.SellerUpdateProductModule),
     canActivate:[AuthGuard]
+  },
+  {
+    path: 'search/:query', loadChildren:()=> import('./search/search.module').then(m=>m.SearchModule)
+  },
+  {
+    path: 'product-details/:productId', loadChildren:()=> import('./product-details/product-details.module').then(m=>m.ProductDetailsModule)
+  },
+  {
+    path: 'user-auth', loadChildren:()=> import('./user-auth/user-auth.module').then(m=>m.UserAuthModule)
   }
 ];
 

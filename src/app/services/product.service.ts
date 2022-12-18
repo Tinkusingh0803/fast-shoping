@@ -24,4 +24,7 @@ export class ProductService {
  getCarousel(){
   return this.http.get(`${environment.sellerApi + '/products?_limit=4'}`)
  }
+ searchProducts(query: string){
+return this.http.get(`${environment.sellerApi + '/products?q=' + query}`);
+ }
 }

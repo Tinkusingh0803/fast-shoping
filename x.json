@@ -50,7 +50,7 @@
     {
       "name": "Laptop",
       "price": 40000,
-      "color": "Golden",
+      "color": "gold",
       "category": "Apple",
       "description": "this is a best laptop under 40000 ",
       "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -64,6 +64,20 @@
       "description": "this is a office bag. and very comfortable to carry.",
       "image": "https://m.media-amazon.com/images/I/61wC3TJ7PhL._UX679_.jpg",
       "id": 9
+    }
+  ],
+  "users": [
+    {
+      "name": "chandrapal singh",
+      "email": "abc@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "chandrapal singh",
+      "email": "abc@gmail.com",
+      "password": "123",
+      "id": 2
     }
   ]
 }

@@ -1,0 +1,30 @@
+.product-image{
+    width: 100%;
+    object-fit: contain;
+    height: 400px;
+}
+.product-color{
+    border: 3px solid rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.display-flex{
+    display: flex; 
+} 
+.inputVal{
+    width: 40px;
+    text-align: center;
+}
+.addCart{
+    border: 1px solid black; 
+    font-size: small;
+}
+.addCart:hover{
+color: white;
+background-color: black;
+}
+.row {
+     --bs-gutter-x: 0rem !important;
+}

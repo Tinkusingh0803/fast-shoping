@@ -34,3 +34,24 @@ button{
  .logout{
     cursor: pointer;
  } 
+ .suggested-result{
+    position: absolute;
+    display: list-item;
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    top: 40px;
+    border: 1px solid #ddd;
+    list-style: none;
+    padding-left: 10px;
+ }
+ .suggested-result li a{
+    text-decoration: none;
+    cursor: pointer;
+ }
+ .suggested-result li{ 
+    list-style-type: none;
+ }
+ .logout{
+   cursor: pointer;
+ }
