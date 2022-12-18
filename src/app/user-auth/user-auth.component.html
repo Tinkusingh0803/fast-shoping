@@ -1,9 +1,20 @@
-<div class="user-auth">
+<div class="user-auth" *ngIf="!userLogin">
     <h1>User Sign-up</h1>
     <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
         <input type="text" placeholder="Enter User Name" class="form-control" name="name" required ngModel>
         <input type="text" placeholder="Enter User Email" class="form-control" name="email" required ngModel>
         <input type="password" placeholder="Enter User Password" class="form-control" name="password" required ngModel>
     <button type="submit" class="btn btn-success w-100 mt-4" [disabled]="userSignUp.invalid">SignUp</button>
+    <a class="userAccount" (click)="userAlreadyAccount()">You have already account click here</a>
+</form>
+</div>
+<div class="user-auth" *ngIf="userLogin">
+    <h5 class="isError">{{isEmailPassWrong}}</h5>
+    <h1>User Log-In</h1>
+    <form #userLogIn="ngForm" class="common-form" (ngSubmit)="logIn(userLogIn.value)"> 
+        <input type="text" placeholder="Enter User Email" class="form-control" name="email" required ngModel>
+        <input type="password" placeholder="Enter User Password" class="form-control" name="password" required ngModel>
+    <button type="submit" class="btn btn-success w-100 mt-4" [disabled]="userLogIn.invalid">Login</button>
+    <a class="userAccount" (click)="userNoAccount()">You have't account click here</a>
     </form>
 </div>

@@ -8,3 +8,10 @@
     margin-top: 20px;
     padding: 10px;
 }
+.userAccount{
+    color: blue;
+    cursor: pointer;
+}
+.isError{
+    color: red;
+}

@@ -8,7 +8,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent implements OnInit {
-
+ userLogin = false;
+ isEmailPassWrong = '';
   constructor(private _service: UserService, private router: Router) { }
 
   ngOnInit(): void {
@@ -24,5 +25,21 @@ export class UserAuthComponent implements OnInit {
         
       }
     })
+  }
+  logIn(userLogin:any){
+    this._service.userSignIn(userLogin).subscribe((res:any)=>{
+      if (res.length > 0) {
+        localStorage.setItem('user', JSON.stringify(res));
+        this.router.navigate(['/']);
+      } else{ 
+        this.isEmailPassWrong = 'wrong email and password'; 
+      } 
+    })
+  }
+  userAlreadyAccount(){
+    this.userLogin = true;
+  }
+  userNoAccount(){
+    this.userLogin = false;
   }
 }

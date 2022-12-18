@@ -13,6 +13,9 @@ export class UserService {
  return this.http.post(`${environment.sellerApi + '/users'}`, user, {observe: 'response'}); 
 
   }
+  userSignIn(user:any){
+return this.http.get(`${environment.sellerApi}/users?email=${user.email}&password=${user.password}`);
+  }
   userAuthReload(){
     if (localStorage.getItem('user')) {
       this.router.navigate(['/'])

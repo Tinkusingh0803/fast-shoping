@@ -29,13 +29,7 @@ export class SellerService {
     }
   }
   userLogin(data: login) {
-    this.http
-      .get(
-        `${environment.sellerApi + '/seller'}?email=${data.email}&password=${
-          data.password
-        }`,
-        { observe: 'response' }
-      )
+    this.http.get(`${environment.sellerApi + '/seller'}?email=${data.email}&password=${data.password}`, { observe: 'response' })
       .subscribe((res: any) => {
         if (res && res.body && res.body.length) {
           localStorage.setItem('seller', JSON.stringify(res.body));
